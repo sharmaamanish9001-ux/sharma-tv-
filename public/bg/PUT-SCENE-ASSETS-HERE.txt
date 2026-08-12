@@ -1,0 +1,1 @@
+Place scene-wide.png and scene-tall.png in this directory.
