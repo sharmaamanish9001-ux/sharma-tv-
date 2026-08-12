@@ -7,14 +7,7 @@ const SOCIAL_LINKS = [
 
 export default function HomePage() {
   return (
-    export default function Home() {
-  return (
-    <main>
-      <h1>Sharma TV</h1>
-      <p>Website is working!</p>
-    </main>
-  );
-}
+   
     <main className="relative flex min-h-dvh flex-1 flex-col items-center justify-between overflow-hidden">
       <div aria-hidden="true" className="fixed inset-0 -z-30 bg-[#17110e]" />
       <div
