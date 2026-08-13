@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start"
   },
-  "dependencies": {"tailwindcss": "4.3.3",
+  "dependencies": {
+    "@tailwindcss/postcss": "latest",
+    "tailwindcss": "4.3.3",
     "@vercel/analytics": "latest",
     "@vercel/speed-insights": "latest",
     "next": "latest",
