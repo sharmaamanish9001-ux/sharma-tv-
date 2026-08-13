@@ -1,8 +1,8 @@
 import Player from "./player";
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://instagram.com/" },
-  { label: "YouTube", href: "https://youtube.com/" },
+  { label: "Instagram", href: "https://instagram.com/@kaku._.sharma133" },
+  { label: "YouTube", href: "https://youtube.com/@sharmatvofficial" },
 ];
 
 export default function HomePage() {
