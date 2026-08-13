@@ -194,7 +194,7 @@ export default function Player() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    audio.src = TRACKS[0].audio;
+    audio.src = TRACKS[trackIndex].audio;
     audio.load();
 
     const onLoaded = () => setDuration(audio.duration);
