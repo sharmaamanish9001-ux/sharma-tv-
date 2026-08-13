@@ -1,7 +1,7 @@
 import Player from "./player";
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://instagram.com/@kaku._.sharma133" },
+  { label: "Instagram", href: "https://instagram.com/kaku._.sharma133" },
   { label: "YouTube", href: "https://youtube.com/@sharmatvofficial" },
 ];
 
