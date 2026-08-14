@@ -34,7 +34,7 @@ export default function HomePage() {
       <header className="fixed inset-x-0 top-0 z-20 flex items-start justify-between pl-[max(1rem,env(safe-area-inset-left))] pt-[max(1rem,env(safe-area-inset-top))] pr-[max(1rem,env(safe-area-inset-right))]">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/55">
-            Golden Era FM
+            Sharma TV
           </p>
           <p className="mt-1 font-mono text-[9px] tabular-nums text-white/35">
             60s · 70s · timeless
@@ -70,7 +70,7 @@ export default function HomePage() {
 
       <section className="pointer-events-none absolute left-1/2 top-[39%] z-0 -translate-x-1/2 -translate-y-1/2 text-center">
         <p className="font-serif text-[clamp(2.5rem,7vw,6.5rem)] leading-none text-white/[0.08]">
-          Golden Era
+          Sharma TV
         </p>
       </section>
 
