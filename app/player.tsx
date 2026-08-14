@@ -182,12 +182,17 @@ function SeekBar({
     </div>
   );
 }
-const [selectedPlaylist, setSelectedPlaylist] =
-  useState("Old Bollywood");
 
-const TRACKS = PLAYLISTS[selectedPlaylist];
-export default function Player() {
+
+  
+ export default function Player() {
+  const [selectedPlaylist, setSelectedPlaylist] =
+    useState("Old Bollywood");
+
+  const TRACKS = PLAYLISTS[selectedPlaylist];
+
   const audioRef = useRef<HTMLAudioElement>(null);
+
   const [trackIndex, setTrackIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
