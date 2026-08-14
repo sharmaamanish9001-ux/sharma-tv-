@@ -340,7 +340,38 @@ export default function Player() {
         </div>
         {controls}
       </div>
+<div className="w-full max-w-3xl mb-4">
+  <div className="flex items-center justify-between gap-3">
+    <div>
+      <p className="text-xs uppercase tracking-[0.25em] text-white/50">
+        SHARMA TV
+      </p>
+      <h2 className="text-xl font-bold text-white">
+        Music Player
+      </h2>
+    </div>
 
+    <select
+      value={selectedPlaylist}
+      onChange={(e) => {
+        setSelectedPlaylist(e.target.value);
+        setTrackIndex(0);
+        setPlaying(false);
+      }}
+      className="rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white outline-none backdrop-blur"
+    >
+      {Object.keys(PLAYLISTS).map((playlist) => (
+        <option
+          key={playlist}
+          value={playlist}
+          className="bg-black text-white"
+        >
+          {playlist}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
       <div className="flex flex-col rounded-[28px] border border-white/10 bg-gradient-to-b from-white/[0.15] to-white/[0.055] p-3 shadow-[0_16px_48px_-12px_rgba(0,0,0,.8),inset_0_1px_0_rgba(255,255,255,.2)] backdrop-blur-3xl backdrop-saturate-[1.7] sm:hidden">
         <div className="flex min-w-0 items-center gap-3">
           <Vinyl playing={playing} />
