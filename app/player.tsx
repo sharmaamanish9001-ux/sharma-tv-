@@ -15,20 +15,76 @@ type Track = {
   audio: string;
 };
 
-const TRACKS: Track[] = [
-  ["Abhi Na Jao Chhod Kar", "Mohammed Rafi & Asha Bhosle", "01-abhi-na-jao-chhod-kar.mp3"],
-  ["Pal Pal Dil Ke Paas", "Kishore Kumar", "02-pal-pal-dil-ke-paas.mp3"],
-  ["Tera Mera Pyaar Amar", "Lata Mangeshkar", "03-tera-mera-pyaar-amar.mp3"],
-  ["Itna Na Mujhse Tu Pyaar Badha", "Talat Mahmood & Lata Mangeshkar", "04-itna-na-mujhse-tu-pyaar-badha.mp3"],
-  ["Jahan Mein Aesa Kaun Hai", "Asha Bhosle", "05-jahan-mein-aesa-kaun-hai.mp3"],
-  ["Hum Tere Pyaar Mein", "Lata Mangeshkar", "06-hum-tere-pyaar-mein.mp3"],
-  ["Yeh Raatein Yeh Mausam", "Kishore Kumar & Asha Bhosle", "07-yeh-raatein-yeh-mausam.mp3"],
-  ["Aaja Piya Tohe Pyaar Doon", "Lata Mangeshkar", "08-aaja-piya-tohe-pyaar-doon.mp3"],
-  ["Dekha Ek Khwaab", "Lata Mangeshkar & Kishore Kumar", "09-dekha-ek-khwaab.mp3"],
-  ["Lag Jaa Gale", "Lata Mangeshkar", "10-lag-jaa-gale.mp3"],
-  ["Ajeeb Dastaan Hai Yeh", "Lata Mangeshkar", "11-ajeeb-dastaan-hai-yeh.mp3"],
-  ["Bade Achhe Lagte Hai", "Amit Kumar & Kalyani Mitra", "12-bade-achhe-lagte-hai.mp3"],
-].map(([title, artist, audio]) => ({ title, artist, audio: `/audio/${audio}` }));
+const PLAYLISTS: Record<string, Track[]> = {
+  "Old Bollywood": [
+    {
+      title: "Abhi Na Jao Chhod Kar",
+      artist: "Mohammed Rafi & Asha Bhosle",
+      audio: "/audio/01-abhi-na-jao-chhod-kar.mp3",
+    },
+    {
+      title: "Pal Pal Dil Ke Paas",
+      artist: "Kishore Kumar",
+      audio: "/audio/02-pal-pal-dil-ke-paas.mp3",
+    },
+    {
+      title: "Tera Mera Pyaar Amar",
+      artist: "Lata Mangeshkar",
+      audio: "/audio/03-tera-mera-pyaar-amar.mp3",
+    },
+    {
+      title: "Itna Na Mujhse Tu Pyaar Badha",
+      artist: "Talat Mahmood & Lata Mangeshkar",
+      audio: "/audio/04-itna-na-mujhse-tu-pyaar-badha.mp3",
+    },
+    {
+      title: "Jahan Mein Aesa Kaun Hai",
+      artist: "Asha Bhosle",
+      audio: "/audio/05-jahan-mein-aesa-kaun-hai.mp3",
+    },
+    {
+      title: "Hum Tere Pyaar Mein",
+      artist: "Lata Mangeshkar",
+      audio: "/audio/06-hum-tere-pyaar-mein.mp3",
+    },
+    {
+      title: "Yeh Raatein Yeh Mausam",
+      artist: "Kishore Kumar & Asha Bhosle",
+      audio: "/audio/07-yeh-raatein-yeh-mausam.mp3",
+    },
+    {
+      title: "Aaja Piya Tohe Pyaar Doon",
+      artist: "Lata Mangeshkar",
+      audio: "/audio/08-aaja-piya-tohe-pyaar-doon.mp3",
+    },
+    {
+      title: "Dekha Ek Khwaab",
+      artist: "Lata Mangeshkar & Kishore Kumar",
+      audio: "/audio/09-dekha-ek-khwaab.mp3",
+    },
+    {
+      title: "Lag Jaa Gale",
+      artist: "Lata Mangeshkar",
+      audio: "/audio/10-lag-jaa-gale.mp3",
+    },
+    {
+      title: "Ajeeb Dastaan Hai Yeh",
+      artist: "Lata Mangeshkar",
+      audio: "/audio/11-ajeeb-dastaan-hai-yeh.mp3",
+    },
+    {
+      title: "Bade Achhe Lagte Hai",
+      artist: "Amit Kumar & Kalyani Mitra",
+      audio: "/audio/12-bade-achhe-lagte-hai.mp3",
+    },
+  ],
+
+  "Himachali / Pahari": [],
+
+  "New Songs": [],
+
+  "Favorites": [],
+};
 
 function formatTime(seconds: number) {
   if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
@@ -126,7 +182,10 @@ function SeekBar({
     </div>
   );
 }
+const [selectedPlaylist, setSelectedPlaylist] =
+  useState("Old Bollywood");
 
+const TRACKS = PLAYLISTS[selectedPlaylist];
 export default function Player() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [trackIndex, setTrackIndex] = useState(0);
@@ -134,7 +193,10 @@ export default function Player() {
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
 
-  const track = useMemo(() => TRACKS[trackIndex], [trackIndex]);
+ const track = useMemo(
+  () => TRACKS[trackIndex],
+  [TRACKS, trackIndex]
+);
 
   const loadTrack = useCallback(async (index: number, autoplay: boolean) => {
     const audio = audioRef.current;
