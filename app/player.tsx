@@ -79,7 +79,63 @@ const PLAYLISTS: Record<string, Track[]> = {
     },
   ],
 
-  "Himachali / Pahari": [],
+  "Himachali / Pahari": [
+  {
+    title: "Chaska",
+    artist: "Himachali",
+    audio: "/audio/01-chaska.mp3",
+  },
+  {
+    title: "Zhumka Nonstop",
+    artist: "Himachali",
+    audio: "/audio/02-zhumka-nonstop.mp3",
+  },
+  {
+    title: "Runjhununua",
+    artist: "Himachali",
+    audio: "/audio/03-runjhunua.mp3",
+  },
+  {
+    title: "Umavatiye",
+    artist: "Himachali",
+    audio: "/audio/04-umavatiye.mp3",
+  },
+  {
+    title: "Chandramaniye",
+    artist: "Himachali",
+    audio: "/audio/05-chandramaniye.mp3",
+  },
+  {
+    title: "To Ghati Meri Jhuriye",
+    artist: "Himachali",
+    audio: "/audio/06-to-ghati-meri-jhuriye.mp3",
+  },
+  {
+    title: "Evergreen Natti",
+    artist: "Himachali",
+    audio: "/audio/07-evergreen-natti.mp3",
+  },
+  {
+    title: "Mereya Sharabnua",
+    artist: "Himachali",
+    audio: "/audio/08-mereya-sharabnua.mp3",
+  },
+  {
+    title: "Thekedarnive",
+    artist: "Himachali",
+    audio: "/audio/09-thekedarnive.mp3",
+  },
+  {
+    title: "Ho Neelma Ho Neelma",
+    artist: "Himachali",
+    audio: "/audio/10-ho-neelma-ho-neelma.mp3",
+  },
+  {
+    title: "Tera Mera Lagan",
+    artist: "Himachali",
+    audio: "/audio/11-tera-mera-lagan.mp3",
+  },
+],
 
   "New Songs": [],
 
