@@ -278,7 +278,7 @@ function SeekBar({
         setPlaying(false);
       }
     }
-  }, []);
+  }, [TRACKS]);
 
   const toggle = useCallback(async () => {
     const audio = audioRef.current;
