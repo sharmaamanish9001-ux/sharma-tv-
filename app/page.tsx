@@ -37,7 +37,7 @@ export default function HomePage() {
             Sharma TV
           </p>
           <p className="mt-1 font-mono text-[9px] tabular-nums text-white/35">
-            60s · 70s · timeless
+            SP4RK STUDIO
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function HomePage() {
               <span className="relative inline-flex size-1.5 rounded-full bg-[#f0d39d]" />
             </span>
             <span className="font-mono text-[9px] tracking-[0.13em] text-white/70">
-              1,086 LISTENING
+              1,089 LISTENING
             </span>
           </div>
         </div>
