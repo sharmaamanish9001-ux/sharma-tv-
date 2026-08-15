@@ -79,7 +79,7 @@ const PLAYLISTS: Record<string, Track[]> = {
     },
   ],
 
-  "Himachali / Pahari": [
+  "Himachali / पहाड़ी गाने": [
   {
     title: "Chaska",
     artist: "Himachali",
