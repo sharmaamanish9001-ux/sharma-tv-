@@ -398,6 +398,7 @@ function SeekBar({
   loop
   playsInline
   className="fixed top-1/2 left-1/2 w-[100vh] h-[100vw] -translate-x-1/2 -translate-y-1/2 -rotate-90 object-cover opacity-60 -z-10"
+  >
   <source
   src="/bg/WhatsApp%20Video%202026-08-17%20at%2010.21.19%20AM.mp4"
   type="video/mp4"
