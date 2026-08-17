@@ -69,9 +69,9 @@ export default function HomePage() {
       </header>
 
       <section className="pointer-events-none absolute left-1/2 top-[39%] z-0 -translate-x-1/2 -translate-y-1/2 text-center">
-        <p className="font-serif text-[clamp(2.5rem,7vw,6.5rem)] leading-none text-white/[0.08]">
-          Sharma TV
-        </p>
+        <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
+  SP4RK STUDIO
+</p>
       </section>
 
       <section className="relative z-10 mt-auto w-full px-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-6">
