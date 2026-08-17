@@ -69,7 +69,7 @@ export default function HomePage() {
       </header>
 
       <section className="pointer-events-none absolute left-1/2 top-[39%] z-0 -translate-x-1/2 -translate-y-1/2 text-center">
-        <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
+        <p className="text-1g uppercase tracking-[0.25em] text-yellow-400">
   SP4RK STUDIO
 </p>
       </section>
